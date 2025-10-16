@@ -1,0 +1,199 @@
+// lib/Utils/TrainData.dart
+var TrainData = [
+  {
+    "trainName": "Green Line Express",
+    "fromCity": "Lahore",
+    "toCity": "Karachi",
+     "date": "21 Aug, 2025",
+    "time": "08:00 AM",
+    "fare": "3500 PKR",
+    "classes": ["Economy", "Business", "AC Sleeper", "First Class"],
+    "image": "assets/images/train.jpeg",
+     "departure": "08:00 AM",
+      "arrival": "06:00 PM",
+      "trainNo": "PKR 101",
+      "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  //   "seats": [
+  //   for (var c in ["A","B","C","D","E"]) 
+  //     for (var n = 1; n <= 5; n++) "$c$n"
+  // ]
+      
+  },
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Tezgam Express",
+    "fromCity": "Rawalpindi",
+    "toCity": "Lahore",
+      "date": "30 Aug, 2025",
+    "time": "10:00 AM",
+    "fare": "1500 PKR",
+    "classes": ["Economy", "AC Sleeper"],
+    "image": "assets/images/train4.jpeg",
+     "departure": "11:00 AM",
+      "arrival": "09:00 PM",
+       "trainNo": "PKR 103",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+       
+  },
+  {
+    "trainName": "Awam Express",
+    "fromCity": "Multan",
+    "toCity": "Karachi",
+     "date": "05 Sep, 2025",
+    "time": "07:00 AM",
+    "fare": "3200 PKR",
+    "classes": ["Economy", "Business"],
+    "image": "assets/images/train4.jpeg",
+    "departure": "08:00 AM",
+      "arrival": "06:00 PM",
+       "trainNo": "PKR 104",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Shalimar Express",
+    "fromCity": "Lahore",
+    "toCity": "Faisalabad",
+     "date": "10 Sep, 2025",
+    "time": "11:15 AM",
+    "fare": "1200 PKR",
+    "classes": ["Economy", "Business", "AC Sleeper"],
+    "image": "assets/images/train5.jpeg",
+    "departure": "08:00 AM",
+      "arrival": "06:00 PM",
+       "trainNo": "PKR 105",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Faisalabad Express",
+    "fromCity": "Faisalabad",
+    "toCity": "Lahore",
+        "date": "20 Sep, 2025",
+    "time": "06:45 AM",
+    "fare": "1400 PKR",
+    "classes": ["Economy", "Business", "AC Sleeper"],
+    "image": "assets/images/train6.jpeg",
+    "departure": "11:00 AM",
+      "arrival": "09:00 PM",
+       "trainNo": "PKR 106",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Pakistan Express",
+    "fromCity": "Karachi",
+    "toCity": "Rawalpindi",
+   "date": "25 Sep, 2025",
+    "time": "05:30 PM",
+    "fare": "4000 PKR",
+    "classes": ["Economy", "Business", "AC Sleeper", "First Class"],
+    "image": "assets/images/train.jpeg",
+     "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 107",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Millat Express",
+    "fromCity": "Lahore",
+    "toCity": "Multan",
+   "date": "05 Oct, 2025",
+    "time": "08:15 AM",
+    "fare": "2000 PKR",
+    "classes": ["Economy", "AC Sleeper"],
+    "image": "assets/images/train2.jpeg",
+    "departure": "08:00 AM",
+      "arrival": "06:00 PM",
+       "trainNo": "PKR 108",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Khyber Express",
+    "fromCity": "Peshawar",
+    "toCity": "Karachi",
+  "date": "05 Oct, 2025",
+    "time": "07:30 AM",
+    "fare": "4500 PKR",
+    "classes": ["Economy", "Business", "AC Sleeper"],
+    "image": "assets/images/train4.jpeg",
+    "departure": "08:00 AM",
+      "arrival": "06:00 PM",
+       "trainNo": "PKR 109",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Bolan Express",
+    "fromCity": "Quetta",
+    "toCity": "Karachi",
+    "date": "05 Oct, 2025",
+    "time": "09:00 AM",
+    "fare": "3800 PKR",
+    "classes": ["Economy", "Business"],
+    "image": "assets/images/train5.jpeg",
+     "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 110",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+];
