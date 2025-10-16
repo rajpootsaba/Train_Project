@@ -221,7 +221,7 @@ class _PassengerDetailsState extends State<PassengerDetails> {
                                                           if (value != null) {
                                 setState(() {
                                   selectedPassengerType = value;
-                                  homeController.identityType.value = value; // save to controller
+                                  homeController.identityType.value = value; 
                                 });
                                                           }
                                                         },
