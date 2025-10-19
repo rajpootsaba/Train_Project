@@ -28,7 +28,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 Positioned(
                   top: 40,
                   left: 25,
-                  
                   child: Container(
                     height: 40,
                     width: 40,
@@ -42,10 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     left: 20,
                     child: Text("Welcom Back", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),))
               ],
-            ),
-            
-            
-          ),
+            ),),
           Expanded(
             flex: 8,
             child: Container(
@@ -57,7 +53,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        
                         SizedBox(height: 12,),
                         TextFormField(
                           decoration: InputDecoration(
@@ -73,9 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               borderSide: BorderSide(color: Colors.grey)
                             ),
                             contentPadding: EdgeInsets.symmetric(
-      vertical: 10, 
-      // horizontal: 12,
-    ),
+                            vertical: 10, ),
                           ),
                           validator: (value) {
                             if(value == null || value.isEmpty){
@@ -88,14 +81,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(height: 12,),
                         TextFormField(
                           decoration: InputDecoration(
-                            
                             prefixIcon: Icon(Icons.lock_outlined, color: Color(0xFF015768),),
                             suffixIcon: Icon(Icons.visibility_off_outlined, color: Color(0xFF015768),),
                             labelText: "Password",
                             labelStyle: TextStyle(
-                              color: Colors.black, fontSize: 16,
-                              
-                            ),
+                              color: Colors.black, fontSize: 16,),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                               borderSide: BorderSide(color: Colors.grey)
@@ -105,9 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               borderSide: BorderSide(color: Colors.grey)
                             ),
                             contentPadding: EdgeInsets.symmetric(
-      vertical: 10, 
-      // horizontal: 12,
-    ),
+                            vertical: 10,),
                           ),
                           validator: (value) {
                             if(value == null || value.isEmpty){
@@ -129,19 +117,16 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Container(
                                     height: 20,
                                        width: 20,
-                                    
-                                                               
-                                    decoration: BoxDecoration(
+                                       decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(7),
                                       border: Border.all(color: Colors.black)
                                     ),
                                   ),
                                    SizedBox(width: 5,),
-                            Text("Remember Me"),
+                                  Text("Remember Me"),
                                 ],
                               ),
-                             
-                            Text("Forgot Password", style: TextStyle(color: Color(0xFF015768), decoration: TextDecoration.underline),)
+                              Text("Forgot Password", style: TextStyle(color: Color(0xFF015768), decoration: TextDecoration.underline),)
                             ],
                           ),
                         ),
@@ -228,17 +213,12 @@ class _LoginScreenState extends State<LoginScreen> {
                               ))
                             ],
                           ),
-                        )
-
-                        
-                      ],
+                        )],
                     ),
                   ),
                 ),
               ),
-            ),
-            
-            )
+            ),)
         ],
       ),
     );

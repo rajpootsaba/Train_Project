@@ -47,7 +47,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                           ),
                         ),
                       ),
-                      // ✅ Back button using GetX
+            
                       Positioned(
                         top: 40,
                         left: 25,
@@ -59,7 +59,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                             shape: BoxShape.circle,
                           ),
                           child: InkWell(
-                            onTap: () => Get.back(), // reactive back
+                            onTap: () => Get.back(),
                             child: Icon(Icons.arrow_back, color: Colors.white),
                           ),
                         ),
@@ -140,7 +140,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                         
                                            Stack(
                           children: [
-                            /// Contact Info Container
+                       
                             Container(
                               margin: EdgeInsets.symmetric(horizontal: 15),
                               padding: EdgeInsets.symmetric(vertical: 12, horizontal: 14),
@@ -195,11 +195,6 @@ class _BookingDetailsState extends State<BookingDetails> {
                                 ],
                               ),
                             ),
-                        
-                            /// Continue Button (Floating)
-                         
-                        
-                        
                           ],
                         ),
                         
@@ -226,19 +221,17 @@ class _BookingDetailsState extends State<BookingDetails> {
       ]),
       bottomNavigationBar: Container(
   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-  color: Colors.white, // background safe
+  color: Colors.white,
   child: Row(
     children: [
-      // Left - White container (PKR + Total Price)
+     
       Expanded(
         flex: 1,
         child: Container(
           height: 60,
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-            // border: Border.all(color: Colors.grey.shade300),
-          ),
+            borderRadius: BorderRadius.circular(10),),
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Center(
             child: Obx(() => Column(
@@ -274,17 +267,15 @@ class _BookingDetailsState extends State<BookingDetails> {
           ),
         ),
       ),
-
       SizedBox(width: 8),
 
-      // Right - Blue container (Pay Now)
       Expanded(
         flex: 1,
         child: InkWell(
           onTap: () {
             Get.to(() => BookingDetails2());
           },
-          splashColor: Colors.transparent, // 👈 shadow/splash remove
+          splashColor: Colors.transparent, 
           highlightColor: Colors.transparent,
           child: Container(
             height: 60,

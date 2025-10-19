@@ -22,21 +22,19 @@ class CustomProfileContainer extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 8),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border.all(color: Colors.grey.shade300),
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade200,
-            blurRadius: 5,
-            offset: const Offset(0, 2),
-          ),
+      color: Colors.white,
+      border: Border.all(color: Colors.grey.shade300),
+      borderRadius: BorderRadius.circular(10),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey.shade200,
+          blurRadius: 5,
+          offset: const Offset(0, 2),
+        ),
         ],
       ),
       child: Column(
-        children: [
-          /// Top Row (Icon, Title, Expand Arrow)
-          Row(
+        children: [Row(
             children: [
               Icon(icon, color: const Color(0xFF196676), size: 28),
               const SizedBox(width: 12),
@@ -61,8 +59,6 @@ class CustomProfileContainer extends StatelessWidget {
               ),
             ],
           ),
-
-          /// Expanded Details
           if (isExpanded) ...[
             const SizedBox(height: 10),
             Divider(color: Colors.grey.shade300),
@@ -70,7 +66,7 @@ class CustomProfileContainer extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 4),
                   child: Row(
                     children: [
-                      const SizedBox(width: 40), // Align with text
+                      const SizedBox(width: 40), 
                       Expanded(
                         child: Text(
                           d,

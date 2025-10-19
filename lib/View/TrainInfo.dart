@@ -53,8 +53,7 @@ class _TrainInfoState extends State<TrainInfo> {
                                           height: 45,
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(10),
-                                            // color: Colors.amber
-                                            color: Color(0xFF196676)
+                                             color: Color(0xFF196676)
         
                                           ),
                                           child: Padding(
@@ -86,16 +85,14 @@ class _TrainInfoState extends State<TrainInfo> {
                                 shape: BoxShape.circle,
                               ),
                               child: InkWell(
-                                onTap: () => Get.back(), // reactive back
+                                onTap: () => Get.back(),
                                 child: Icon(Icons.arrow_back, color: Colors.white),
                               ),
                             ),
                           ),
                         ],
                       ),
-                      Container(
-                        // color: Colors.white,
-                        child:
+                      Container( child:
                                 Expanded(
                                   child: Obx(()=>
                                     ListView.builder(
@@ -108,56 +105,14 @@ class _TrainInfoState extends State<TrainInfo> {
                                           time: train.getDuratin(),
                                           fare: train.fare,
                                           fromCity: train.fromCity,
-                                          date: train.date,
-                                     
-                                          
-                                          
-                                        );
+                                          date: train.date,);
                                       },
                                     ),
                                   ),
                                                     )
                       )
                       ]
-                      ),
-          //             Positioned(
-          //   top: 140,
-          //   left: 16,
-          //   right: 16,
-          //   child: Container(
-          //                 // color: Colors.white,
-          //                 child:
-          //                         Expanded(
-          //                           child: Obx(()=>
-          //                             ListView.builder(
-          //                               itemCount: homeController.trainsList.length,
-          //                               itemBuilder: (context, index) {
-          //                                 final train = homeController.trainsList[index];
-          //                                 return TrainInfoCustomContainer(
-          //                                   name: train.trainName,
-          //                                   toCity: train.toCity,
-          //                                   time: train.getDuratin(),
-          //                                   fare: train.fare,
-          //                                   fromCity: train.fromCity,
-          //                                   date: train.date,
-                                       
-                                            
-                                            
-          //                                 );
-          //                               },
-          //                             ),
-          //                           ),
-          //                                             )
-          //               ),
-          // ),
-     ] ),
+                      ),] ),
                       bottomNavigationBar: CustomBottomBar(),
-                    );
-                            
-                    
-        
-      
-      
-    
-  }
+                    );}
 }

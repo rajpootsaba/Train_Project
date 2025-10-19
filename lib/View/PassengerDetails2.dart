@@ -20,9 +20,7 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
       backgroundColor: Colors.white,
         resizeToAvoidBottomInset: false,
       body: Stack(
-        children: [
-        
-          Column(
+        children: [Column(
             children: [
               Container(
                       height: 220,
@@ -80,9 +78,7 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
                           ),
                           child: SingleChildScrollView(
                             child: Column(
-                              children: [
-                                /// Email
-                                TextFormField(
+                              children: [TextFormField(
                                   controller: homeController.emailController,
                                   decoration: InputDecoration(
                                     labelText: "Email Address",
@@ -111,8 +107,6 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
                                   ),
                                 ),
                                 const SizedBox(height: 18),
-                                                
-                                /// Phone
                                 TextFormField(
                                   controller: homeController.phoneController,
                                   decoration: InputDecoration(
@@ -142,8 +136,6 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
                                   ),
                                 ),
                                 const SizedBox(height: 18),
-                                                
-                                /// Identity Number
                                 TextFormField(
                                   controller:
                                       homeController.identityNumberController,
@@ -174,14 +166,10 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
                                   ),
                                 ),
                                 const SizedBox(height: 20),
-                                                
-                                /// Passenger Type Dropdown
-                                Obx(
-                                                  () => DropdownButtonFormField<String>(
-                                                    value: homeController.identityTypes.contains(homeController.identityType.value)
+                                Obx(() => DropdownButtonFormField<String>(value: homeController.identityTypes.contains(homeController.identityType.value)
                               ? homeController.identityType.value
                               : null,
-                                                    decoration: InputDecoration(
+                               decoration: InputDecoration(
                             labelText: "Identity Type",
                             labelStyle: const TextStyle(color: Colors.grey),
                             border: OutlineInputBorder(
@@ -196,9 +184,8 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
                               borderRadius: BorderRadius.circular(10),
                               borderSide: BorderSide(color: Colors.grey.shade200),
                             ),
-                            contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
-                                                    ),
-                                                    items: homeController.identityTypes.map((String type) {
+                            contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),),
+                            items: homeController.identityTypes.map((String type) {
                             Icon leadingIcon;
                             if (type == 'CNIC') {
                               leadingIcon = const Icon(Icons.credit_card, color: Color(0xFF015768));
@@ -207,7 +194,6 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
                             } else {
                               leadingIcon = const Icon(Icons.description_outlined, color: Color(0xFF015768));
                             }
-                                                
                             return DropdownMenuItem<String>(
                               value: type,
                               child: Row(
@@ -217,21 +203,12 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
                                   Text(type),
                                 ],
                               ),
-                            );
-                                                    }).toList(),
-                                                    onChanged: (value) {
+                            );}).toList(),
+                            onChanged: (value) {
                             if (value != null) {
                               homeController.identityType.value = value;
-                            }
-                                                    },
-                                                  ),
-                                                ),
-                                                
-                                const SizedBox(height: 25),
-                                                
-                                /// Continue Button
-                               
-                                                  ]),
+                            } },),),
+                            const SizedBox(height: 25),]),
                           ),
                         ),
                       ],
@@ -264,36 +241,28 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
                                 ),
                               ),
                             ),
-                            const SizedBox(height: 30),
-                          
-              
-            ],
-          ),
-
-          /// 🔹 Back Button
-          Positioned(
-            top: 40,
-            left: 25,
-            child: Container(
-              height: 40,
-              width: 40,
-              decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
-                shape: BoxShape.circle,
-              ),
-              child: InkWell(
-                onTap: () => Get.back(),
-                child: const Icon(Icons.arrow_back, color: Colors.white),
-              ),
-            ),
-          ),
-
-          /// 🔹 Passenger Info Container (Floating on top of background)
-          Positioned(
-            top: 100,
-            left: 16,
-            right: 16,
-            child:  Container(
+                            const SizedBox(height: 30),],),
+                             Positioned(
+                              top: 40,
+                              left: 25,
+                              child: Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(0.2),
+                                  shape: BoxShape.circle,
+                                  ),
+                                  child: InkWell(
+                                    onTap: () => Get.back(),
+                                    child: const Icon(Icons.arrow_back, color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                                Positioned(
+                                  top: 100,
+                                  left: 16,
+                                  right: 16,
+                                  child:  Container(
                           margin: EdgeInsets.symmetric(horizontal: 15),
                           height: 230,
                           width: double.infinity,
@@ -332,11 +301,7 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
     );
   }),
 )),
-
-  
-
-
-                              Divider(color: Colors.grey.shade200, thickness: 1,),
+Divider(color: Colors.grey.shade200, thickness: 1,),
                               SizedBox(height: 7,),
                               Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 17, ),
@@ -344,8 +309,7 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
                                   children: [
                                     TextFormField(
                                        onChanged: (val) {
-    homeController.passengerName.value = val;  // name save hoga controller me
-  },
+    homeController.passengerName.value = val;  },
                                       decoration: InputDecoration(
                                         labelText: "Passenger Name",
                                         labelStyle: TextStyle(color: Colors.grey),
@@ -414,15 +378,7 @@ class _PassengerDetails2State extends State<PassengerDetails2> {
       });
     }
   },
-)
-
-                                
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
+)],),)],),),
           ),
         ],
       ),

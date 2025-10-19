@@ -1,4 +1,4 @@
-// CustomSeatContainer.dart
+
 import 'package:flutter/material.dart';
 
 class CustomSeatContainer extends StatefulWidget {
@@ -33,35 +33,27 @@ class _CustomSeatContainerState extends State<CustomSeatContainer> {
       setState(() {
         selected = !selected;
       });
-      widget.onTap(); // call parent callback
+      widget.onTap(); 
     }
   }
 
   @override
   Widget build(BuildContext context) {
     Color seatColor = widget.isBooked
-        ? const Color(0xFFFF8731) // Booked
+        ? const Color(0xFFFF8731) 
         : selected
-            ? const Color(0xFF015768) // Selected
-            : Color(0xFFF3F6FF); // Available
-
-    return InkWell(
-      onTap: toggleSelection,
-      child: Container(
-        constraints: BoxConstraints(
-    maxWidth: 50,   
-    maxHeight: 70,  
-  ),
+            ? const Color(0xFF015768) 
+            : Color(0xFFF3F6FF);
+            return InkWell(
+                  onTap: toggleSelection,
+                  child: Container(
+                  constraints: BoxConstraints(
+                                  maxWidth: 50,   
+                                  maxHeight: 70,  
+                                ),
         decoration: BoxDecoration(
           color: seatColor,
-          borderRadius: BorderRadius.circular(10),
-          // border: Border.all(
-          //   color: widget.isBooked
-          //       ? const Color(0xFFFF8731)
-          //       : selected
-          //           ? const Color(0xFF015768)
-          //           : Colors.grey,
-          // ),
+     
         ),
         child: Center(
           child: Text(

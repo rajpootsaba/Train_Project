@@ -8,9 +8,7 @@ import 'package:trainticketapp/View/SearchCustomContainer2.dart';
 class PassengerDetails extends StatefulWidget {
  
 
-  const PassengerDetails({super.key,
- 
-  });
+  const PassengerDetails({super.key,});
    
 
   @override
@@ -58,7 +56,6 @@ class _PassengerDetailsState extends State<PassengerDetails> {
                         ),
                       ),
                     ),
-                   
                     Positioned(
                       top: 40,
                       left: 25,
@@ -140,13 +137,7 @@ class _PassengerDetailsState extends State<PassengerDetails> {
                                     fontWeight: FontWeight.w600,
                                     color: isPassenger2Selected ? Color(0xFF015768) : Colors.grey,
                                   ),
-                                ),
-                                                          ),
-                                                        ],
-                                                      )
-                                                      
-                                                      
-                                    ),
+                                ),),],)),
                                     Divider(color: Colors.grey.shade200, thickness: 1,),
                                     SizedBox(height: 13,),
                                     Padding(
@@ -214,21 +205,14 @@ class _PassengerDetailsState extends State<PassengerDetails> {
                                     SizedBox(width: 8),
                                     Text(type),
                                   ],
-                                ),
-                                                          );
-                                                        }).toList(),
-                                                        onChanged: (value) {
-                                                          if (value != null) {
+                                ),);}).toList(),
+                                onChanged: (value) {
+                                  if (value != null) {
                                 setState(() {
                                   selectedPassengerType = value;
                                   homeController.identityType.value = value; 
-                                });
-                                                          }
-                                                        },
-                                                      )
-                                                      
-                                      
-                                        ],
+                                });}
+                                },)],
                                       ),
                                     )
                                   ],
@@ -245,13 +229,11 @@ class _PassengerDetailsState extends State<PassengerDetails> {
                       ),
                     ),),
                  ),
-                
-                 InkWell(
+                  InkWell(
                   splashColor: Colors.transparent,   
           highlightColor: Colors.transparent, 
           hoverColor: Colors.transparent, 
                 onTap: () {
-                  
                   Get.to(()=>PassengerDetails2());
                 },
                 child: Container(

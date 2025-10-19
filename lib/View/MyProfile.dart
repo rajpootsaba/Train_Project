@@ -20,9 +20,7 @@ class _MyProfileState extends State<MyProfile> {
       body: Stack(
         children: [
           Column(
-            children: [
-              // 🔹 Header
-              Stack(
+            children: [Stack(
                   children: [
                     Container(
                       height: 220,
@@ -48,8 +46,7 @@ class _MyProfileState extends State<MyProfile> {
                         ),
                       ),
                     ),
-                    // ✅ Back button using GetX
-                    Positioned(
+                     Positioned(
                       top: 40,
                       left: 25,
                       child: Container(
@@ -60,7 +57,7 @@ class _MyProfileState extends State<MyProfile> {
                           shape: BoxShape.circle,
                         ),
                         child: InkWell(
-                          onTap: () => Get.back(), // reactive back
+                          onTap: () => Get.back(),
                           child: Icon(Icons.arrow_back, color: Colors.white),
                         ),
                       ),
@@ -113,9 +110,7 @@ class _MyProfileState extends State<MyProfile> {
               ),
             ],
           ),
-
-          // 🔹 Profile Picture
-          Positioned(
+           Positioned(
             top: 140,
             left: 0,
             right: 0,

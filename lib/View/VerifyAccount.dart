@@ -41,10 +41,7 @@ class _VerifyAccountState extends State<VerifyAccount> {
                     left: 20,
                     child: Text("Verify Your Account", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),))
               ],
-            ),
-            
-            
-          ),
+            ),),
           Expanded(
             flex: 8,
             child: Container(
@@ -108,11 +105,7 @@ class _VerifyAccountState extends State<VerifyAccount> {
 
                       ],),
                       SizedBox(height: 25,),
-
-                      
-                      
-                      
-                      Row(
+                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             RichText(text: TextSpan(
@@ -124,10 +117,6 @@ class _VerifyAccountState extends State<VerifyAccount> {
                             ))
                           ],
                         ),
-                      
-                     
-                      
-                    
                       SizedBox(height: 30,),
                       InkWell(
                         onTap: () {
@@ -141,19 +130,11 @@ class _VerifyAccountState extends State<VerifyAccount> {
                           ),
                           child: Center(child: Text("Verify", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),)),
                         ),
-                      ),
-                     
-                     
-                     
-              
-                      
-                    ],
+                      ),],
                   ),
                 ),
               ),
-            ),
-            
-            )
+            ),)
         ],
       ),
     );

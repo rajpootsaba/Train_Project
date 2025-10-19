@@ -23,7 +23,7 @@ class SeatSelection extends StatelessWidget {
 
   final HomeController homeController = Get.find<HomeController>();
 
-  /// Legend item widget
+
   Widget buildLegendItem(Color color, String text) {
     return Row(
       children: [
@@ -76,8 +76,7 @@ class SeatSelection extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // ✅ Back button using GetX
-                  Positioned(
+                    Positioned(
                     top: 40,
                     left: 25,
                     child: Container(
@@ -169,15 +168,9 @@ Obx(() {
     ),
   );
 }),
-
-
-                        Expanded(
-                          child: Obx(() {
-                            if (homeController.selectedTrain.value == null) {
+Expanded( child: Obx(() { if (homeController.selectedTrain.value == null) {
                               return const Center(child: Text("No train selected"));
-                            }
-
-                            return GridView.builder(
+                            }return GridView.builder(
                               padding: const EdgeInsets.all(16),
                               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 5,
@@ -233,9 +226,7 @@ Obx(() {
               ),
             ],
           ),
-
-          /// Stack container (train info) overlapping blue+white
-          Positioned(
+           Positioned(
             top: 120,
             left: 16,
             right: 16,

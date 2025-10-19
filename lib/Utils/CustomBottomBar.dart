@@ -29,7 +29,6 @@ class CustomBottomBar extends StatelessWidget {
         onTap: (index) {
           homeController.selectedIndex.value = index;
 
-          // 🔹 Page Navigation Logic
           switch (index) {
             case 0:
               Get.to(() => const HomeScreen());
@@ -41,7 +40,7 @@ class CustomBottomBar extends StatelessWidget {
               Get.to(() => const TrainInfo());
               break;
             case 3:
-              Get.off(() => const MyProfile()); // apni screen ka naam use karo
+              Get.off(() => const MyProfile()); 
               break;
           }
         },

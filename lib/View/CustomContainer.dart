@@ -72,10 +72,7 @@ class _CustomContainerState extends State<CustomContainer> {
         ),
       ),
         ],
-      )
-      
-      
-      ),
+      )),
     );
   }
 }

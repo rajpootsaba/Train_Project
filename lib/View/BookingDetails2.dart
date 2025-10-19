@@ -24,9 +24,7 @@ class _BookingDetails2State extends State<BookingDetails2> {
       backgroundColor: Colors.white,
         resizeToAvoidBottomInset: false,
       body: Stack(
-        children: [
-          /// 🔹 Background
-          Column(
+        children: [Column(
             children: [
               Stack(
                     children: [
@@ -54,8 +52,7 @@ class _BookingDetails2State extends State<BookingDetails2> {
                           ),
                         ),
                       ),
-                      // ✅ Back button using GetX
-                      Positioned(
+                       Positioned(
                         top: 40,
                         left: 25,
                         child: Container(
@@ -66,7 +63,7 @@ class _BookingDetails2State extends State<BookingDetails2> {
                             shape: BoxShape.circle,
                           ),
                           child: InkWell(
-                            onTap: () => Get.back(), // reactive back
+                            onTap: () => Get.back(), 
                             child: Icon(Icons.arrow_back, color: Colors.white),
                           ),
                         ),
@@ -134,9 +131,7 @@ class _BookingDetails2State extends State<BookingDetails2> {
                                           Text(homeController.identityNumberController.text,
                                               style: TextStyle(color: Colors.black)),
                                         ],
-                                      ),
-                                     // extra space for button overlap
-                                    ],
+                                      ), ],
                                   ),
                                 ),
                                  SizedBox(height: 9), 
@@ -194,9 +189,7 @@ class _BookingDetails2State extends State<BookingDetails2> {
                               ),
                               child: Obx(() => DropdownButtonFormField<String>(
                                     decoration: InputDecoration(
-                                       prefixIcon: CircleAvatar(
-                                        // radius: 9,
-                                        backgroundColor: Colors.green.shade100, 
+                                       prefixIcon: CircleAvatar( backgroundColor: Colors.green.shade100, 
                                         child: Icon(
                                           Icons.flight,
                                           color: Colors.red,
@@ -221,22 +214,17 @@ class _BookingDetails2State extends State<BookingDetails2> {
                                       }
                                     },
                                   )),
-                            ),
-                            
-                            
-                              ],
+                            ),],
                             ),
                           ),
                         ),
                       ),
-                    )
-             
-                    ]),
+                    )]),
                      Positioned(
-            top: 95,
-            left: 16,
-            right: 16,
-            child:  Container(
+                          top: 95,
+                          left: 16,
+                          right: 16,
+                          child:  Container(
                           margin: EdgeInsets.symmetric(horizontal: 5),
                           height: 200,
                           width: double.infinity,
@@ -277,9 +265,9 @@ class _BookingDetails2State extends State<BookingDetails2> {
                                 child: Column(
                                   children: [
                                     TextFormField(
-                                       onChanged: (val) {
-    homeController.passengerName.value = val;  // name save hoga controller me
-  },
+                                     onChanged: (val) {
+                                    homeController.passengerName.value = val; 
+                                  },
                                       decoration: InputDecoration(
                                         labelText: "Passenger Name",
                                         labelStyle: TextStyle(color: Colors.grey),
@@ -344,14 +332,11 @@ class _BookingDetails2State extends State<BookingDetails2> {
     if (value != null) {
       setState(() {
         selectedPassengerType = value;
-        homeController.identityType.value = value; // save to controller
+        homeController.identityType.value = value; 
       });
     }
   },
-)
-
-                                
-                                  ],
+)],
                                 ),
                               )
                             ],
@@ -363,19 +348,15 @@ class _BookingDetails2State extends State<BookingDetails2> {
                      ] ),
                       bottomNavigationBar: Container(
   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-  color: Colors.white, // background safe
+  color: Colors.white, 
   child: Row(
-    children: [
-      // Left - White container (PKR + Total Price)
-      Expanded(
+    children: [Expanded(
         flex: 1,
         child: Container(
           height: 60,
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-            // border: Border.all(color: Colors.grey.shade300),
-          ),
+            borderRadius: BorderRadius.circular(10),),
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Center(
             child: Obx(() => Column(
@@ -411,17 +392,14 @@ class _BookingDetails2State extends State<BookingDetails2> {
           ),
         ),
       ),
-
-      SizedBox(width: 8),
-
-      // Right - Blue container (Pay Now)
-      Expanded(
+       SizedBox(width: 8),
+        Expanded(
         flex: 1,
         child: InkWell(
           onTap: () {
             Get.to(() => TicketDetails());
           },
-          splashColor: Colors.transparent, // 👈 shadow/splash remove
+          splashColor: Colors.transparent,
           highlightColor: Colors.transparent,
           child: Container(
             height: 60,
@@ -438,9 +416,5 @@ class _BookingDetails2State extends State<BookingDetails2> {
                   fontWeight: FontWeight.bold),
             ),
           ),
-       ))])) );
-                   
-        
-
-  }
+       ))])) );}
 }

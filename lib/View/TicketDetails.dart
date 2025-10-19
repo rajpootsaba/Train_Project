@@ -151,9 +151,7 @@ class _TicketDetailsState extends State<TicketDetails> {
                                         Text(homeController.identityNumberController.text,
                                             style: TextStyle(color: Colors.black)),
                                       ],
-                                    ),
-                                   // extra space for button overlap
-                                  ],
+                                    ),],
                                 ),
                               ),
                                SizedBox(height: 11,),
@@ -217,11 +215,9 @@ class _TicketDetailsState extends State<TicketDetails> {
       ]),
        bottomNavigationBar: Container(
   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-  color: Colors.white, // background safe
+  color: Colors.white, 
   child: Row(
-    children: [
-      // Left - White container (PKR + Total Price)
-      Expanded(
+    children: [ Expanded(
         flex: 1,
         child: Container(
           height: 60,
@@ -238,15 +234,13 @@ class _TicketDetailsState extends State<TicketDetails> {
       ),
 
       SizedBox(width: 8),
-
-  
       Expanded(
         flex: 1,
         child: InkWell(
           onTap: () {
             Get.to(() => MyTicket());
           },
-          splashColor: Colors.transparent, // 👈 shadow/splash remove
+          splashColor: Colors.transparent, 
           highlightColor: Colors.transparent,
           child: Container(
             height: 60,

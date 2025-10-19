@@ -26,7 +26,7 @@ class TrainInfoCustomContainer extends StatefulWidget {
 }
 
 class _TrainInfoCustomContainerState extends State<TrainInfoCustomContainer> {
-  bool showDetails = false; // 👈 toggle state
+  bool showDetails = false; 
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +48,7 @@ class _TrainInfoCustomContainerState extends State<TrainInfoCustomContainer> {
 
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          /// TOP ROW (Train Name + Arrow Button)
-          Row(
+        children: [Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
@@ -61,8 +59,6 @@ class _TrainInfoCustomContainerState extends State<TrainInfoCustomContainer> {
                   color: Color(0xFF196676),
                 ),
               ),
-
-              /// Tap to expand/collapse
               IconButton(
                 icon: Icon(
                   showDetails
@@ -78,8 +74,6 @@ class _TrainInfoCustomContainerState extends State<TrainInfoCustomContainer> {
               ),
             ],
           ),
-
-          /// Show Train Info when expanded
           if (showDetails) ...[
             const SizedBox(height: 10),
             Divider(color: Colors.grey.shade300),
@@ -95,8 +89,6 @@ class _TrainInfoCustomContainerState extends State<TrainInfoCustomContainer> {
       ),
     );
   }
-
-  /// Helper row for clean layout
   Widget _buildInfoRow(String title, String value) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),

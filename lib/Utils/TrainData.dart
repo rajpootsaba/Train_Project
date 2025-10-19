@@ -1,4 +1,4 @@
-// lib/Utils/TrainData.dart
+
 var TrainData = [
   {
     "trainName": "Green Line Express",
@@ -17,12 +17,199 @@ var TrainData = [
       "B1", "B2", "B3", "B4",
       "C1", "C2", "C3", "C4",
       "D1", "D2", "D3", "D4",
-    ]
-  //   "seats": [
-  //   for (var c in ["A","B","C","D","E"]) 
-  //     for (var n = 1; n <= 5; n++) "$c$n"
-  // ]
+    ]},
+  
       
+  
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
+  },
+  {
+    "trainName": "Karachi Express",
+    "fromCity": "Karachi",
+    "toCity": "Faisalabad",
+      "date": "25 Aug, 2025",
+    "time": "09:30 AM",
+    "fare": "2800 PKR",
+    "classes": ["Economy", "Business", "First Class"],
+    "image": "assets/images/train2.jpeg",
+      "departure": "09:30 AM",
+      "arrival": "03:30 PM",
+       "trainNo": "PKR 102",
+       "seats": [
+      "A1", "A2", "A3", "A4",
+      "B1", "B2", "B3", "B4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+    ]
   },
   {
     "trainName": "Karachi Express",

@@ -21,9 +21,7 @@ class _SearchCustomContainerState extends State<SearchCustomContainer> {
         border: Border.all(color: Colors.grey.shade200),
       ),
       child: Column(
-        children: [
-          // Train name + number
-          Padding(
+        children: [Padding(
             padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -41,10 +39,7 @@ class _SearchCustomContainerState extends State<SearchCustomContainer> {
               ],
             ),
           ),
-
           Divider(color: Colors.grey.shade200, thickness: 1),
-
-          // From - To
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 15),
             child: Row(
@@ -65,14 +60,11 @@ class _SearchCustomContainerState extends State<SearchCustomContainer> {
           ),
 
           Divider(color: Colors.grey.shade100, thickness: 1),
-
-          // Departure - Icon - Arrival
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 13),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // Departure
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -85,8 +77,6 @@ class _SearchCustomContainerState extends State<SearchCustomContainer> {
                         style: const TextStyle(color: Colors.grey)),
                   ],
                 ),
-
-                // Train icon
                 Container(
                   height: 33,
                   width: 33,
@@ -96,9 +86,7 @@ class _SearchCustomContainerState extends State<SearchCustomContainer> {
                   ),
                   child: const Icon(Icons.train, color: Color(0xFF015768)),
                 ),
-
-                // Arrival
-                Column(
+                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
@@ -115,8 +103,6 @@ class _SearchCustomContainerState extends State<SearchCustomContainer> {
           ),
 
           const SizedBox(height: 7),
-
-          // Duration
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

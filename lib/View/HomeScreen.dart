@@ -18,12 +18,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final HomeController homeController = Get.put(HomeController());
-  //  final List<Widget> screens = [
-   
-  //   MyTicket(),
-  //   TrainInfo(),
-  // ];
-   
+ 
   String? selectedClass;
 
   List<String> classOptions = List<String>.from(
@@ -48,34 +43,17 @@ class _HomeScreenState extends State<HomeScreen> {
       });
     }
   }
-  //  int _selectedIndex = 0;
-
-  // void _onItemTapped(int index) {
-  //   setState(() {
-  //     _selectedIndex = index;
-  //   });
-  //   if (index == 1) {
-  //     Get.to(() => MyTicket());
-  //   }
-  // }
-
   @override
   Widget build(BuildContext context) {
     return 
        Scaffold(
          resizeToAvoidBottomInset: true,
-        body: 
-        
-        Column(
-          children: [
-            /// Stack (Blue Header + White Card)
-            Expanded(
+        body: Column(
+          children: [Expanded(
               child: Stack(
                 children: [
                   Column(
-                    children: [
-                      /// Blue Header
-                      Container(
+                    children: [Container(
                         height: 330,
                         decoration: const BoxDecoration(
                           borderRadius: BorderRadius.only(
@@ -88,9 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 20, vertical: 35),
                           child: Column(
-                            children: [
-                              /// Profile Row
-                              Row(
+                            children: [Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Row(
@@ -136,12 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                 ],
-                              ),
-      
-                              const SizedBox(height: 20),
-      
-                              /// Heading
-                              const Align(
+                              ),const SizedBox(height: 20),const Align(
                                 alignment: Alignment.centerLeft,
                                 child: Text(
                                   "Let's Book Your\n Next Trip!",
@@ -156,16 +127,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-      
-                      /// Background white
                       Expanded(child: Container(color: Colors.white,
-                      child:  
-                               Padding(
+                      child: Padding(
                                  padding: const EdgeInsets.only(top: 270),
-                                 child: Column(
-                                  
-                                  
-                                   children: [
+                                 child: Column(children: [
                                      Padding(
                                        padding: const EdgeInsets.symmetric(horizontal: 15),
                                        child: Row(
@@ -197,36 +162,19 @@ class _HomeScreenState extends State<HomeScreen> {
                                                  arrival: train.arrival,
                                                  duration: train.getDuratin(),
                                                   date: train.date, 
-                                                  image: train.image,
-                                 
-                                            
-                                            );
-                                            
-                                        
-                                        
-                                          }
-                                          
-                                          ),
+                                                  image: train.image,);}),
                                       ),
                                    ],
                                  ),
-                               ),
-                               
-                             
-                                  ),
+                               ),),
                       ),
                     ],
                   ),
-      
-                  /// White Card (Form)
                   Positioned(
                     top: 190,
                     left: 20,
                     right: 20,
-                     
-                    child: Container(
-                      // height: 60,
-                      decoration: BoxDecoration(
+                    child: Container(decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -236,33 +184,31 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Form(
                           key: homeController.formKey,
                           child: Column(
-                            children: [
-                              /// One Way - Round Trip
-                            Padding(
+                            children: [Padding(
                               padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 12),
                               child: SingleChildScrollView(
                                 child: Column(
                                   children: [
                                      Obx(() => Row(
-        children: [
-      ChoiceChip(
-        label: Text(
-          "One Way",
-          style: TextStyle(
-            color: homeController.selectedType.value == "One Way"
-                ? Colors.white
-                : Colors.black,
-          ),
-        ),
-        selected: homeController.selectedType.value == "One Way",
-        selectedColor: Color(0xFF015768),
-        backgroundColor: Colors.grey[100],
-        checkmarkColor: Colors.white,
-        onSelected: (val) {
-          homeController.setType("One Way");
-        },
-      ),
-      SizedBox(width: 10), // space between chips
+                                      children: [
+                                      ChoiceChip(
+                                      label: Text(
+                                        "One Way",
+                                        style: TextStyle(
+                                          color: homeController.selectedType.value == "One Way"
+                                              ? Colors.white
+                                              : Colors.black,
+                                        ),
+                                      ),
+                                      selected: homeController.selectedType.value == "One Way",
+                                      selectedColor: Color(0xFF015768),
+                                      backgroundColor: Colors.grey[100],
+                                      checkmarkColor: Colors.white,
+                                      onSelected: (val) {
+                                        homeController.setType("One Way");
+                                      },
+                                    ),
+      SizedBox(width: 10), 
       ChoiceChip(
         label: Text(
           "Round Trip",
@@ -283,75 +229,61 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       )
       ),
-                          
-                                                        
-                                  const SizedBox(height: 10),
-                                                        
-                                 
-                          Stack(
-                            clipBehavior: Clip.none,
-                            children: [
-                              Column(
-                                children: [
-                                  TextFormField(
-                                    controller: homeController.From,
-                                    decoration: InputDecoration(
-                                      prefixIcon: const Icon(Icons.train, color: Color(0xFF015768)),
-                                      labelText: "From",
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide(color: Colors.grey.shade300),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(height: 11),
-                                  TextFormField(
-                                    controller: homeController.To,
-                                    decoration: InputDecoration(
-                                      prefixIcon: const Icon(Icons.location_city, color: Color(0xFF015768)),
-                                      labelText: "To",
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide(color: Colors.grey.shade300),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          
-                              /// Swap button placed inside Stack
-                              Positioned(
-                                top: 40,   // adjust as needed
-                                right: 22,
-                                child: Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: const BoxDecoration(
-                                    color: Color(0xFF015768),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: IconButton(
-                                    onPressed: () {
-                                      // swap logic
-                                      var temp = homeController.From.text;
-                                      homeController.From.text = homeController.To.text;
-                                      homeController.To.text = temp;
-                                    },
-                                    icon: const Icon(Icons.swap_vert, color: Colors.white),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          
-                                  
-                                                        
-                                 
-                                                        
-                                  const SizedBox(height: 11),
-                                                        
-                                  /// Date Field
-                                  TextFormField(
+      const SizedBox(height: 10),
+      Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Column(
+              children: [
+                TextFormField(
+                  controller: homeController.From,
+                  decoration: InputDecoration(
+                    prefixIcon: const Icon(Icons.train, color: Color(0xFF015768)),
+                    labelText: "From",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.grey.shade300),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 11),
+                TextFormField(
+                  controller: homeController.To,
+                  decoration: InputDecoration(
+                    prefixIcon: const Icon(Icons.location_city, color: Color(0xFF015768)),
+                    labelText: "To",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.grey.shade300),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+             Positioned(
+              top: 40,  
+              right: 22,
+              child: Container(
+                height: 40,
+                width: 40,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF015768),
+                  shape: BoxShape.circle,
+                ),
+                child: IconButton(
+                  onPressed: () {
+                     var temp = homeController.From.text;
+                    homeController.From.text = homeController.To.text;
+                    homeController.To.text = temp;
+                  },
+                  icon: const Icon(Icons.swap_vert, color: Colors.white),
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 11),
+        TextFormField(
                                     controller: homeController.Date,
                                     readOnly: true,
                                     onTap: () => _pickDate(context),
@@ -371,11 +303,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                     ),
                                   ),
-                                                        
-                                  const SizedBox(height: 11),
-                                                        
-                                  /// Class Dropdown
-                                  DropdownButtonFormField<String>(
+                                   const SizedBox(height: 11),
+                                   DropdownButtonFormField<String>(
                                     value: selectedClass,
                                     decoration: InputDecoration(
                                       prefixIcon: const Icon(
@@ -411,10 +340,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ? "Please select a class"
                                         : null,
                                   ),
-                                                        
                                   const SizedBox(height: 12),
-                                                        
-                                  /// Search Button
                                   InkWell(
                                     onTap: () {  if (homeController.From.text.isEmpty || homeController.To.text.isEmpty) {
                               Get.snackbar("Error", "Please select both cities");
@@ -449,11 +375,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ],
                                 ),
                               ),
-                            ),
-                             
-                          
-                          
-                            ],
+                            ),],
                           ),
                         ),
                       ),
@@ -461,13 +383,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-            ),
-
-           
-          ],
+            ),],
         ),
           bottomNavigationBar: CustomBottomBar(),
-      );
-    
-  }
+      );}
 }

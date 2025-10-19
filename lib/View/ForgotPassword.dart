@@ -42,10 +42,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     left: 20,
                     child: Text("Forgot Password", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),))
               ],
-            ),
-            
-            
-          ),
+            ),),
           Expanded(
             flex: 8,
             child: Container(
@@ -56,9 +53,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   padding: const EdgeInsets.symmetric(vertical: 35, horizontal: 20),
                   child: SingleChildScrollView(
                     child: Column(
-                      children: [
-                        
-                        TextFormField(
+                      children: [TextFormField(
                           decoration: InputDecoration(
                             prefixIcon: Icon(Icons.email_outlined, color: Color(0xFF015768),),
                             labelText: "Email Address",
@@ -72,9 +67,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                               borderSide: BorderSide(color: Colors.grey)
                             ),
                             contentPadding: EdgeInsets.symmetric(
-      vertical: 10, 
-      // horizontal: 12,
-    ),
+                            vertical: 10, 
+                            
+                          ),
                           ),
                           validator: (value) {
                             if(value == null || value.isEmpty){
@@ -84,9 +79,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                             }
                           },
                         ),
-                     
-                        
-                      
                         SizedBox(height: 25,),
                         InkWell(
                           onTap: () {
@@ -101,8 +93,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                             child: Center(child: Text("Send Code", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),)),
                           ),
                         ),
-                       
-                       
                         SizedBox(height: 25,),
                         InkWell(
                           onTap: () {
@@ -119,17 +109,12 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                               ))
                             ],
                           ),
-                        )
-
-                        
-                      ],
+                        )],
                     ),
                   ),
                 ),
               ),
-            ),
-            
-            )
+            ),)
         ],
       ),
     );

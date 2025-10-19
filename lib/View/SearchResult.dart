@@ -88,8 +88,7 @@ class _SearchResultState extends State<SearchResult> {
                 child: Column(children: [  SizedBox(height: 60), 
                   SizedBox(
                    height: 100,
-                                  
-                    child: ListView.builder(
+                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: homeController.dateList.length,
                       itemBuilder: (context, index) {
@@ -226,11 +225,7 @@ class _SearchResultState extends State<SearchResult> {
                           Column(children: [Text("Date", style: TextStyle(fontWeight: FontWeight.bold)), Text("${widget.date}")],),
                       ],
                     ),
-                  ),
-                 
-
-
-                ],
+                  ), ],
               ),
             ),
             

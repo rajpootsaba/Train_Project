@@ -40,12 +40,8 @@ class _AccountCreateState extends State<AccountCreate> {
                   Positioned(
                     bottom: 18,
                     left: 20,
-                    child: Text("Get Started Today", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),))
-              ],
-            ),
-            
-            
-          ),
+                    child: Text("Get Started Today", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),))], ),  ),
+              
           Expanded(
             flex: 8,
             child: Container(
@@ -64,29 +60,18 @@ class _AccountCreateState extends State<AccountCreate> {
                             labelStyle: TextStyle(color: Colors.black, fontSize: 16),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(color: Colors.grey),
-                              
-                              
-                            ),
-                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey),   ),
+                              focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(color: Colors.grey)
-                            ),
-                            contentPadding: EdgeInsets.symmetric(
-      vertical: 10, 
-      // horizontal: 12,
-    ),
-                            
+                              borderSide: BorderSide(color: Colors.grey) ),
+                              contentPadding: EdgeInsets.symmetric(
+                              vertical: 10, ), ),
+                              validator: (value) {
+                              if(value == null || value.isEmpty){
+                                return "Please Enter Your Name";
+                                  }
+                            },
                           ),
-                          validator: (value) {
-                            if(value == null || value.isEmpty){
-                              return "Please Enter Your Name";
-                            }
-                          },
-                        
-                          
-                          
-                        ),
                         SizedBox(height: 12,),
                         TextFormField(
                           decoration: InputDecoration(
@@ -95,58 +80,43 @@ class _AccountCreateState extends State<AccountCreate> {
                             labelStyle: TextStyle(color: Colors.black, fontSize: 16),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(color: Colors.grey),
-                            ),
-                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey),),
+                              focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(color: Colors.grey)
+                              borderSide: BorderSide(color: Colors.grey)),
+                              contentPadding: EdgeInsets.symmetric(
+                              vertical: 10, ),  ),
+                              validator: (value) {
+                                if(value == null || value.isEmpty){
+                                  return "Enter Your Email";
+                                }else if(!value.contains("@")){
+                                  return "Email Must Containen @";
+                                }
+                              },
                             ),
-                            contentPadding: EdgeInsets.symmetric(
-      vertical: 10, 
-      // horizontal: 12,
-    ),
-                          ),
-                          validator: (value) {
-                            if(value == null || value.isEmpty){
-                              return "Enter Your Email";
-                            }else if(!value.contains("@")){
-                              return "Email Must Containen @";
-                            }
-                          },
-                        ),
-                        SizedBox(height: 12,),
-                        TextFormField(
-                          decoration: InputDecoration(
-                            
-                            prefixIcon: Icon(Icons.lock_outlined, color: Color(0xFF015768),),
-                            suffixIcon: Icon(Icons.visibility_off_outlined, color: Color(0xFF015768),),
-                            labelText: "Password",
-                            labelStyle: TextStyle(
-                              color: Colors.black, fontSize: 16,
-                              
-                            ),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(color: Colors.grey)
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(color: Colors.grey)
-                            ),
-                            contentPadding: EdgeInsets.symmetric(
-      vertical: 10, 
-      // horizontal: 12,
-    ),
-                          ),
-                          validator: (value) {
-                            if(value == null || value.isEmpty){
-                              return "Enter Your Password";
-                            }else if(value.length < 6){
-                              return "Password Must Containen at leat 6 digits";
-                            }
-                          },
-                          
-                        ),
+                            SizedBox(height: 12,),
+                            TextFormField(
+                              decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.lock_outlined, color: Color(0xFF015768),),
+                                suffixIcon: Icon(Icons.visibility_off_outlined, color: Color(0xFF015768),),
+                                labelText: "Password",
+                                labelStyle: TextStyle(
+                                color: Colors.black, fontSize: 16,),
+                                border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(color: Colors.grey) ),
+                                focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(color: Colors.grey) ),
+                                contentPadding: EdgeInsets.symmetric(
+                                vertical: 10,  ), ),
+                                validator: (value) {
+                                  if(value == null || value.isEmpty){
+                                    return "Enter Your Password";
+                                  }else if(value.length < 6){
+                                    return "Password Must Containen at leat 6 digits";
+                                  }
+                                },),
                         SizedBox(height: 15,),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 3),
@@ -155,43 +125,29 @@ class _AccountCreateState extends State<AccountCreate> {
                             children: [
                               Container(
                                 height: 20,
-                                   width: 20,
-                                
-                             
+                                width: 20,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7),
-                                  border: Border.all(color: Colors.black)
-                                ),
-                              ),
+                                borderRadius: BorderRadius.circular(7),
+                                border: Border.all(color: Colors.black)),),
                               SizedBox(width: 5,),
-                             Expanded(
-                              child: RichText(
-                                
+                              Expanded(
+                               child: RichText(
                                 text: TextSpan(
                                   children: [
-                                 TextSpan(text: "I agree ", style: TextStyle(color: Colors.black)),
-                                 TextSpan(text: "Privacy Policy ",style: TextStyle(color: Color(0xFF015768), decoration: TextDecoration.underline) ),
-                                 TextSpan(text: "and ", style: TextStyle(color: Colors.black)),
-                                  TextSpan(text: "User Agreement",style: TextStyle(color: Color(0xFF015768), decoration: TextDecoration.underline) ),
-                                  ],
-                              
-                              
-                             ),
-                             
-                             
-                             ))
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 25,),
-                        Container(
-                          height: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Color(0xFF015768)
-                          ),
-                          child: Center(child: Text("Create Account", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),)),
-                        ),
+                                    TextSpan(text: "I agree ", style: TextStyle(color: Colors.black)),
+                                    TextSpan(text: "Privacy Policy ",style: TextStyle(color: Color(0xFF015768), decoration: TextDecoration.underline) ),
+                                    TextSpan(text: "and ", style: TextStyle(color: Colors.black)),
+                                    TextSpan(text: "User Agreement",style: TextStyle(color: Color(0xFF015768), decoration: TextDecoration.underline) ),
+                                      ], ), )) ], ),   ),
+                                  SizedBox(height: 25,),
+                                  Container(
+                                    height: 50,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Color(0xFF015768)
+                                    ),
+                                    child: Center(child: Text("Create Account", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),)),
+                                  ),
                         SizedBox(height: 20,),
                         Row(
                           children: [
@@ -277,3 +233,47 @@ class _AccountCreateState extends State<AccountCreate> {
     );
   }
 }
+                                
+                              
+                         
+                                
+                               
+                                  
+                                
+                               
+          
+       
+                            
+                              
+                         
+                           
+                         
+                              
+                            
+            
+            
+        
+           
+      
+                        
+                        
+                          
+                          
+     
+    
+                            
+                         
+                     
+                         
+                           
+                             
+                             
+                            
+                            
+                                
+                              
+                              
+                             
+                                
+                             
+                              
